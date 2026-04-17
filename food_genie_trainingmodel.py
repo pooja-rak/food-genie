@@ -6,7 +6,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
-df=pd.read_csv('C:/Users/pooja/OneDrive/Desktop/ML Internship/Food Genie/food_craving_dataset_5000.csv')
+df=pd.read_csv('food_craving_dataset_5000.csv')
 print(df)
 label_encoders={}
 for column in ["Craving Type", "Cuisine", "Mood Associated", "Food Name"]:
