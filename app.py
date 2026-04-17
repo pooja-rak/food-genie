@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('D:/ML/Food Genie/Food Genie/svm.pkl')
-label_encoders = joblib.load('D:/ML/Food Genie/Food Genie/label_encoders.pkl')
+model = joblib.load('svm.pkl')
+label_encoders = joblib.load('label_encoders.pkl')
 
 st.set_page_config(page_title="Food Genie", page_icon="💫", layout="wide")
 
