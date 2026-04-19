@@ -7,17 +7,23 @@ label_encoders = joblib.load('label_encoders.pkl')
 
 st.set_page_config(page_title="Food Genie", page_icon="💫", layout="wide")
 
+# ✅ FIXED CSS (typo corrected + sidebar targeting)
 st.markdown("""
     <style>
         h1, h2, h3 {
             color: #d92344;
         }
-        .stButton>button {
+
+        section[data-testid="stSidebar"] .stButton > button {
             width: 100% !important;
-            height: 50px !important;
+            height: 55px !important;
             font-size: 16px !important;
-            border-radius: 10px !important;
-            margin-bottom: 10px;     
+            border-radius: 12px !important;
+            margin-bottom: 10px !important;
+        }
+
+        section[data-testid="stSidebar"] .stButton > button:hover {
+            transform: scale(1.03);
         }
     </style>
 """, unsafe_allow_html=True)
@@ -28,15 +34,21 @@ if "input_data" not in st.session_state:
     st.session_state.input_data = None
 
 st.sidebar.title("📋🍴 Dish Directory")
-if st.sidebar.button("🔦 Spotlight"):
+
+# ✅ ONLY CHANGE: added use_container_width=True
+if st.sidebar.button("🔦 Spotlight", use_container_width=True):
     st.session_state.page = "Home"
-if st.sidebar.button("🍲🔍 Dish Decoder"):
+
+if st.sidebar.button("🍲🔍 Dish Decoder", use_container_width=True):
     st.session_state.page = "Input"
-if st.sidebar.button("😋🔓 Craving Cracked"):
+
+if st.sidebar.button("😋🔓 Craving Cracked", use_container_width=True):
     st.session_state.page = "Result"
-if st.sidebar.button("📖✨ Our Story"):
+
+if st.sidebar.button("📖✨ Our Story", use_container_width=True):
     st.session_state.page = "About"
 
+# باقي code unchanged 👇
 if st.session_state.page == "Home":
     st.title("🍽️ Welcome to Your Personalized Food Genie!")
     st.markdown("Feeling hungry but unsure what to eat? Here is Your personal Genie for satisfying cravings!")
@@ -79,16 +91,19 @@ elif st.session_state.page == "Input":
 
     craving = st.selectbox("😋 What are you craving for?", 
                            ["Sweet", "Salty", "Cold", "Sour", "Comfort", "Spicy", "Crunchy", "Warm", "Savory"])
-    st.write("Your selected the choice is :",craving)
+    st.write("Your selected the choice is :", craving)
+
     cuisine = st.selectbox("🍜 What cuisine are you in the mood for?", 
                            ["Indian", "Western", "Mexican", "American", "Japanese", "Italian", "Korean", "Various"])
-    st.write("Your selected the choice is :",cuisine)
+    st.write("Your selected the choice is :", cuisine)
+
     mood = st.selectbox("😊 How are you feeling today?", 
                         ["Comfort", "Movie Mood", "Tired/Hot Day", "Fun/Playful", "Sick/Relaxed", "Low Mood",
                          "Snack Craving", "Energetic", "Rainy Day", "Adventurous", "Sad/Comfort", "Celebration", 
                          "Stress Relief", "Cozy/Winter", "Appetite Boost", "Happy/Chill", "Excited", 
                          "Relaxed", "Stressed", "Happy", "Bored"])
-    st.write("Your selected the choice is :",mood)
+    st.write("Your selected the choice is :", mood)
+
     col1, col2, col3 = st.columns([1, 1, 2])
     with col1:
         if st.button("⬅️ Back"):
@@ -162,4 +177,5 @@ elif st.session_state.page == "About":
     with col2:
         if st.button("🔦 Sportlight"):
             st.session_state.page = "Home"
+
     st.success("NOTE:This Genie's magic is happens according to the Trained Dataset")
