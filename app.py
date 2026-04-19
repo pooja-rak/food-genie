@@ -14,6 +14,10 @@ st.markdown("""
         }
         .stButton>button {
             width: 100% !important;
+            height: 50px !important;
+            font-size: 16px !important;
+            border-radius: 10px !important;
+            margin-bottom: 10px;     
         }
     </style>
 """, unsafe_allow_html=True)
