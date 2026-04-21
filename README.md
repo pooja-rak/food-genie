@@ -1,22 +1,22 @@
-# 🍽️ Food Genie - Smart Food Recommendation System
+# Food Genie - Smart Food Recommendation System
 
-## 📌 Overview
+## Overview
 
 Food Genie is a Machine Learning-based web application that recommends food items based on user preferences, mood, and cravings. It uses a trained Support Vector Machine (SVM) model to provide fast and personalized food suggestions through an interactive web interface.
 
 ---
 
-## 🚀 Features
+## Features
 
-* 🔍 Personalized food recommendations
-* 🤖 Machine Learning model (SVM)
-* ⚡ Fast and simple UI using Streamlit
-* 📊 Trained on a dataset of 5000+ food entries
-* 🎯 Real-time predictions based on user input
+*  Personalized food recommendations
+*  Machine Learning model (SVM)
+*  Fast and simple UI using Streamlit
+*  Trained on a dataset of 5000+ food entries
+*  Real-time predictions based on user input
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * Python
 * Streamlit
@@ -26,7 +26,7 @@ Food Genie is a Machine Learning-based web application that recommends food item
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Food-Genie/
@@ -41,7 +41,7 @@ Food-Genie/
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 
@@ -64,35 +64,35 @@ streamlit run app.py
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-👉 https://food-genie-4x3jdmcg9tgtb2yxgeyyxx.streamlit.app/
+Link: https://food-genie-4x3jdmcg9tgtb2yxgeyyxx.streamlit.app/
 ---
 
-## 📊 Dataset
+## Dataset
 
 * Custom dataset with 5000+ entries
 * Includes features like mood, taste preference, time, and craving type
 
 ---
 
-## 🎯 Future Improvements
+## Future Improvements
 
-* 📱 Mobile-friendly UI
-* 🌍 Location-based recommendations
-* 🧠 Advanced ML/DL models
-* 🗺️ Integration with maps for nearby restaurants
+*  Mobile-friendly UI
+*  Location-based recommendations
+*  Advanced ML/DL models
+*  Integration with maps for nearby restaurants
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Pooja Rajaram**
 MCA Student | Aspiring Machine Learning Engineer
 
 ---
 
-## ⭐ Contribution
+## Contribution
 
 Feel free to fork this repository and contribute!
 
