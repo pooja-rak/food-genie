@@ -61,12 +61,6 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
-
----
-
-## Live Demo
-
-Link: https://food-genie-4x3jdmcg9tgtb2yxgeyyxx.streamlit.app/
 ---
 
 ## Dataset
